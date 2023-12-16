@@ -9,14 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{bgcolor: 'green'}}>
+      <AppBar position="fixed" sx={{bgcolor: 'white'}}>
         <Toolbar variant="dense">
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Starbucks
-          </Typography>
+          <img src="/logo_3.jpg" alt="Logo" style={{ width: '120px', height: '30px' }} />
         </Toolbar>
       </AppBar>
     </Box>
