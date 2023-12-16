@@ -81,7 +81,7 @@ def scrape_item_list(url):
 
 # 一つの世界遺産の詳細データの取得
 def scrape_item_detail(url):
-    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
+    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
     data = [None for _ in range(len(headers))]
     data[0] = url
 
@@ -148,7 +148,7 @@ def main():
     # category = args.category
     csv_file_path = "result.csv"
 
-    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
+    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
 
     with open(csv_file_path, mode='w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
