@@ -135,7 +135,7 @@ const D3Chart = ({category}) => {
             .attr("x", 30 + lengthScale_2(d[category]) / 2 + 5); // テキストのX座標（バーの右横に調整）
         };
 
-        setHeight(850);
+        setHeight(700);
       } else {
 
         const svg = d3.select(chartRef.current);
