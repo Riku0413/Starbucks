@@ -51,6 +51,10 @@ const D3Chart = ({category}) => {
       .domain([0, maxCategoryValue]) // ドメインを設定
       .range([0, 401]); // レンジを設定
 
+    const lengthScale_2 = d3.scaleLinear()
+      .domain([0, maxCategoryValue]) // ドメインを設定
+      .range([0, 361]); // レンジを設定
+
     const drawChart = async () => {
       d3.select(chartRef.current).selectAll("*").remove();
 
@@ -108,7 +112,7 @@ const D3Chart = ({category}) => {
           .delay((d, i) => i * 100)
           .duration(700)
           .attr("x", (d) => 30)
-          .attr("width", (d) => lengthScale(d[category]) / 2)
+          .attr("width", (d) => lengthScale_2(d[category]) / 2)
           .on("end", (d, i) => {
             showText(d, i);
           });
@@ -118,7 +122,7 @@ const D3Chart = ({category}) => {
         // テキストを表示する関数
         const showText = (d, i) => {
           svg.append("text")
-            .attr("x", 30 + lengthScale(d[category]) / 2) // テキストのX座標（バーの右横に調整）
+            .attr("x", 30 + lengthScale_2(d[category]) / 2) // テキストのX座標（バーの右横に調整）
             .attr("y", i * 80 + 80) // テキストのY座標
             .text(getLabelText(d, category))
             .attr("fill", "black")
@@ -128,7 +132,7 @@ const D3Chart = ({category}) => {
             .transition() // フェードインのアニメーション
             .duration(500)
             .attr("opacity", 1) // アニメーション中に不透明に変更
-            .attr("x", 30 + lengthScale(d[category]) / 2 + 5); // テキストのX座標（バーの右横に調整）
+            .attr("x", 30 + lengthScale_2(d[category]) / 2 + 5); // テキストのX座標（バーの右横に調整）
         };
 
         setHeight(850);
