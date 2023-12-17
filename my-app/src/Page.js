@@ -90,7 +90,7 @@ const Page = () => {
               <Typography variant="body2" style={{marginLeft: '30px'}}>
                 健康に良いフラペチーノを選んでね
                 <br/>
-                - Don't go to cafe if you really value your health -
+                - Don't drink frappuccino if you really value your health -
               </Typography>
             </CardContent>
             <CardActions style={{marginRight: '40px', display: 'flex', justifyContent: 'flex-end' }}>
