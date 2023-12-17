@@ -94,7 +94,7 @@ const Page = () => {
               </Typography>
             </CardContent>
             <CardActions style={{marginRight: '40px', display: 'flex', justifyContent: 'flex-end' }}>
-              <a href="https://product.starbucks.co.jp/beverage/frappuccino/" target="_blank" rel="noopener noreferrer">
+              <a href="https://product.starbucks.co.jp/beverage/frappuccino/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <Button size="small" variant="contained" style={{ backgroundColor: 'green', color: 'white' }}>go to store</Button>
               </a>
             </CardActions>
