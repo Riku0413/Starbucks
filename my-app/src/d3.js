@@ -16,17 +16,17 @@ const D3Chart = ({category}) => {
 
   useEffect(() => {
 
-    const csvData = `商品名,エネルギー,タンパク質,脂質,炭水化物,食塩相当量,食物繊維,糖質,ナトリウム,カリウム,トランス脂肪酸,飽和脂肪酸,カフェイン,url,photo_url
-    メルティホワイト ピスタチオ フラペチーノ,462.0,6.6,27.4,47.3,0.6,0.2,47.1,243.0,202.0,0.1,9.7,0.0,https://menu.starbucks.co.jp/4524785556461,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    エスプレッソ  アフォガート フラペチーノ,438.0,4.2,28.5,41.7,0.5,0.7,41.0,189.0,433.0,0.4,18.2,160.0,https://menu.starbucks.co.jp/4524785344143,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    コーヒー フラペチーノ,183.0,3.3,2.9,36.0,0.4,0.1,35.9,173.0,268.0,0.1,1.7,86.0,https://menu.starbucks.co.jp/4524785165731,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    ダーク モカ チップ フラペチーノ,312.0,4.5,12.9,44.7,0.5,2.1,42.5,200.0,552.0,0.1,8.3,98.0,https://menu.starbucks.co.jp/4524785166059,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    キャラメル フラペチーノ,302.0,3.7,12.0,44.9,0.5,0.1,44.8,192.0,289.0,0.2,7.5,86.0,https://menu.starbucks.co.jp/4524785165816,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    抹茶 クリーム フラペチーノ,322.0,5.3,12.7,47.1,0.5,0.9,46.1,184.0,273.0,0.2,7.8,78.0,https://menu.starbucks.co.jp/4524785165892,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    バニラ クリーム フラペチーノ,255.0,4.5,12.4,31.5,0.5,0.1,31.4,184.0,206.0,0.2,7.7,0.0,https://menu.starbucks.co.jp/4524785165939,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    マンゴー パッション ティー フラペチーノ,140.0,0.7,0.0,34.4,0.2,1.0,33.4,95.0,209.0,0.0,0.0,0.0,https://menu.starbucks.co.jp/4524785118751,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    My フルーツ³ フラペチーノ グレープ ＆ ピーチ,425.0,7.7,15.2,66.6,0.6,,,,,,,,https://menu.starbucks.co.jp/4524785517479,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg
-    My フルーツ³ フラペチーノ ストロベリー,360.0,7.9,11.9,57.4,0.6,,,,,,,,https://menu.starbucks.co.jp/4524785479791,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg`;
+    const csvData = `商品名,エネルギー,タンパク質,脂質,炭水化物,食塩相当量,食物繊維,糖質,ナトリウム,カリウム,トランス脂肪酸,飽和脂肪酸,カフェイン,url,photo_url,価格
+    メルティホワイト ピスタチオ フラペチーノ,462.0,6.6,27.4,47.3,0.6,0.2,47.1,243.0,202.0,0.1,9.7,0.0,https://menu.starbucks.co.jp/4524785556461,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,690
+    エスプレッソ  アフォガート フラペチーノ,438.0,4.2,28.5,41.7,0.5,0.7,41.0,189.0,433.0,0.4,18.2,160.0,https://menu.starbucks.co.jp/4524785344143,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,630
+    コーヒー フラペチーノ,183.0,3.3,2.9,36.0,0.4,0.1,35.9,173.0,268.0,0.1,1.7,86.0,https://menu.starbucks.co.jp/4524785165731,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,515
+    ダーク モカ チップ フラペチーノ,312.0,4.5,12.9,44.7,0.5,2.1,42.5,200.0,552.0,0.1,8.3,98.0,https://menu.starbucks.co.jp/4524785166059,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,590
+    キャラメル フラペチーノ,302.0,3.7,12.0,44.9,0.5,0.1,44.8,192.0,289.0,0.2,7.5,86.0,https://menu.starbucks.co.jp/4524785165816,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,575
+    抹茶 クリーム フラペチーノ,322.0,5.3,12.7,47.1,0.5,0.9,46.1,184.0,273.0,0.2,7.8,78.0,https://menu.starbucks.co.jp/4524785165892,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,590
+    バニラ クリーム フラペチーノ,255.0,4.5,12.4,31.5,0.5,0.1,31.4,184.0,206.0,0.2,7.7,0.0,https://menu.starbucks.co.jp/4524785165939,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,575
+    マンゴー パッション ティー フラペチーノ,140.0,0.7,0.0,34.4,0.2,1.0,33.4,95.0,209.0,0.0,0.0,0.0,https://menu.starbucks.co.jp/4524785118751,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,575
+    My フルーツ³ フラペチーノ グレープ ＆ ピーチ,425.0,7.7,15.2,66.6,0.6,,,,,,,,https://menu.starbucks.co.jp/4524785517479,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,750
+    My フルーツ³ フラペチーノ ストロベリー,360.0,7.9,11.9,57.4,0.6,,,,,,,,https://menu.starbucks.co.jp/4524785479791,https://asset.menu.starbucks.co.jp/public/sku_images/4524785556461/4524785556461_1_m.jpg,750`;
     
     // CSVデータを行ごとに分割
     const rows = csvData.split('\n');
@@ -49,7 +49,7 @@ const D3Chart = ({category}) => {
     // ドメインとレンジを設定
     const lengthScale = d3.scaleLinear()
       .domain([0, maxCategoryValue]) // ドメインを設定
-      .range([0, 449]); // レンジを設定
+      .range([0, 401]); // レンジを設定
 
     const drawChart = async () => {
       d3.select(chartRef.current).selectAll("*").remove();
@@ -66,6 +66,8 @@ const D3Chart = ({category}) => {
             return d[category] + ' g';
           case "食塩相当量":
             return d[category] + ' g';
+          case "価格":
+            return '¥' + d[category];
           default:
             return ""; // デフォルトは空文字列としておく
         }
@@ -121,7 +123,7 @@ const D3Chart = ({category}) => {
             .text(getLabelText(d, category))
             .attr("fill", "black")
             .attr("font-size", "12px")
-            .attr("font-family", "Comic Sans MS") // フォントを指定
+            .attr("font-family", "Arial") // フォントを指定
             .attr("opacity", 0) // 初期状態で透明に設定
             .transition() // フェードインのアニメーション
             .duration(500)
@@ -181,7 +183,7 @@ const D3Chart = ({category}) => {
             .text(getLabelText(d, category))
             .attr("fill", "black")
             .attr("font-size", "12px")
-            .attr("font-family", "Comic Sans MS") // フォントを指定
+            .attr("font-family", "Arial") // フォントを指定
             .attr("opacity", 0) // 初期状態で透明に設定
             .transition() // フェードインのアニメーション
             .duration(500)

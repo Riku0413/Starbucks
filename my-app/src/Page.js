@@ -35,9 +35,13 @@ const Page = () => {
         <div style={{height:'80px'}}></div>
         <div style={{ display: 'flex', justifyContent: 'space-around', maxWidth: '100vw'}}>
         <Box sx={{width: '80vw'}}>
+        <Box sx={{ width: isWideScreen ? '72%' : '100%', fontWeight: 'bold', fontSize: '40px', display: 'flex', alignItems: 'center', justifyContent: 'left', marginLeft: '10px' }}>
+          フラペチーノ
+          <div style={{fontSize: '20px', alignSelf: 'flex-end', marginBottom: '8px'}}>を</div>
+        </Box>
           <Box sx={{ display: 'flex', flexDirection: isWideScreen ? 'row' : 'column', justifyContent: 'space-between', width: '80vw' }}>
-            <Box sx={{ width: isWideScreen ? '72%' : '100%', fontWeight: 'bold', fontSize: '20px', display: 'flex', alignItems: 'center', justifyContent: isWideScreen ? null : 'center'}}>
-            　栄養成分別にフラペチーノを比較できるよ🧋
+            <Box sx={{ width: isWideScreen ? '72%' : '100%', fontWeight: 'bold', fontSize: '20px', display: 'flex', alignItems: 'center', justifyContent: isWideScreen ? null : 'center' }}>
+            　栄養成分別に比較できるよ🧋
             </Box>
             <div style={{height:'20px'}}></div>
             <Box sx={{ width: isWideScreen ? '24%' : '100%', marginRight: isWideScreen? '20px' : '0' }}>
@@ -56,6 +60,7 @@ const Page = () => {
                   <MenuItem value={"脂質"}>脂質</MenuItem>
                   <MenuItem value={"炭水化物"}>炭水化物</MenuItem>
                   <MenuItem value={"食塩相当量"}>食塩相当量</MenuItem>
+                  <MenuItem value={"価格"}>価格</MenuItem>
                 </Select>
               </FormControl>
             </Box>
