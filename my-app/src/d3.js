@@ -89,7 +89,7 @@ const D3Chart = ({category}) => {
           .attr("target", "_blank") // Open the link in a new tab
           .append("tspan") // Append a tspan element for the text content
           .text((d) => d.商品名)
-          .attr("y", (d, i) => i * 80 + 50) // ラベルのX座標（中央に調整）
+          .attr("y", (d, i) => i * 65 + 50) // ラベルのX座標（中央に調整）
           .attr("x", 30) // ラベルのY座標
           .attr("fill", "black") // ラベルの色
           .attr("font-size", "12px")
@@ -99,10 +99,10 @@ const D3Chart = ({category}) => {
         // 棒グラフの初期設定（高さ0）
         const bar = svg.selectAll("rect").data(jsonData).enter().append("rect");
   
-        bar.attr("y", (d, i) => i * 80 + 60)
+        bar.attr("y", (d, i) => i * 65 + 60)
           .attr("x", 30)
           .attr("fill", "green")
-          .attr("height", 30)
+          .attr("height", 20)
           .attr("width", 0);
   
         console.log(category)
@@ -123,7 +123,7 @@ const D3Chart = ({category}) => {
         const showText = (d, i) => {
           svg.append("text")
             .attr("x", 30 + lengthScale_2(d[category]) / 2) // テキストのX座標（バーの右横に調整）
-            .attr("y", i * 80 + 80) // テキストのY座標
+            .attr("y", i * 65 + 74) // テキストのY座標
             .text(getLabelText(d, category))
             .attr("fill", "black")
             .attr("font-size", "12px")
