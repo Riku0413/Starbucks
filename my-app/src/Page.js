@@ -78,7 +78,7 @@ const Page = () => {
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom style={{marginLeft: '30px'}}>
                 Data
               </Typography>
-              <Typography variant="h5" component="div" style={{marginLeft: '30px'}}>
+              <Typography variant="h5" component="div" style={{marginLeft: '30px', fontWeight: 'bold'}}>
                 {category}
               </Typography>
 

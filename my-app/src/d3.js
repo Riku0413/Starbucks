@@ -121,7 +121,18 @@ const D3Chart = ({category}) => {
   
         // テキストを表示する関数
         const showText = (d, i) => {
+          const textId = `text-${i}`; // ユニークなIDを生成
+
+          // iからi+5までの削除ループ
+          // 自然なアニメーションで前のテキストを削除！
+          for (let k = i; k < i + 5; k++) {
+            const removeId = `text-${k}`;
+            // 既存の同じIDのテキスト要素を削除
+            svg.select(`#${removeId}`).remove();
+          }
+        
           svg.append("text")
+            .attr("id", textId) // 動的に生成したIDを割り当て
             .attr("x", 30 + lengthScale_2(d[category]) / 2) // テキストのX座標（バーの右横に調整）
             .attr("y", i * 65 + 74) // テキストのY座標
             .text(getLabelText(d, category))
@@ -134,6 +145,7 @@ const D3Chart = ({category}) => {
             .attr("opacity", 1) // アニメーション中に不透明に変更
             .attr("x", 30 + lengthScale_2(d[category]) / 2 + 5); // テキストのX座標（バーの右横に調整）
         };
+        
 
         setHeight(700);
       } else {
@@ -181,7 +193,17 @@ const D3Chart = ({category}) => {
   
         // テキストを表示する関数
         const showText = (d, i) => {
+          const textId = `text-${i}`; // ユニークなIDを生成
+
+          // iからi+5までの削除ループ
+          for (let k = i; k < i + 5; k++) {
+            const removeId = `text-${k}`;
+            // 既存の同じIDのテキスト要素を削除
+            svg.select(`#${removeId}`).remove();
+          }
+
           svg.append("text")
+            .attr("id", textId) // 動的に生成したIDを割り当て
             .attr("x", 360 + lengthScale(d[category]) / 2) // テキストのX座標（バーの右横に調整）
             .attr("y", i * 40 + 50) // テキストのY座標
             .text(getLabelText(d, category))
