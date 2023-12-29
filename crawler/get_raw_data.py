@@ -134,7 +134,7 @@ def scrape_data(url, csv_file_path):
 
 
 def main(): 
-    csv_file_path = "beverage-ROASTARY.csv"
+    csv_file_path = "beverage.csv"
 
     scrape_data(URL, csv_file_path)
 
