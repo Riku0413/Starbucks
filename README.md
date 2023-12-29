@@ -16,28 +16,28 @@ Starbucks
  ┗━ test_d3
 ```
 
-### crawler
+### 1. crawler
 
 - 営業部
 - スクレイピングによる商品データの取得
   - [スタバの栄養成分データ](https://product.starbucks.co.jp/allergy/nutrient/)
 
-### data
+### 2. data
 
 - 倉庫
 - 使用しているデータをCSV形式で保持
 
-### my-app
+### 3. my-app
 
 - ライブ会場
 - Reactアプリケーション
 
-### process_data
+### 4. process_data
 
 - 工房
 - データの加工プログラム
 
-### test_d3
+### 5. test_d3
 
 - 実験室
 - d3の機能のテストと実験、および機能拡張
