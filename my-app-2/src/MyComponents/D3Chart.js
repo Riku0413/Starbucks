@@ -77,16 +77,17 @@ const D3Chart = ({category, sortOrder}) => {
   
     // テキストを描画
     const gy = svg.append("g").selectAll("text")
-        .data(data)
-        .enter()
-        .append("text")
-        .attr("class", "item-name") 
-        .attr("y", (d) => y(d.letter) - 15)
-        .attr("x", 120)
-        .text(d => d.letter)
-        .attr("font-weight", "bold")
-        .attr("fill", "black")
-        .attr("font-size", "17px");
+    .data(data)
+    .enter()
+    .append("text")
+    .attr("class", "item-name")
+    .attr("y", (d) => y(d.letter) - 15)
+    .attr("x", 120)
+    .attr("font-weight", "bold")
+    .attr("fill", "black")
+    .attr("font-size", "30px")
+    .text(d => (d.letter.length > 18) ? d.letter.slice(0, 18) + "..." : d.letter);
+
   
     const images = svg.append("g").selectAll("image")
         .data(data)
