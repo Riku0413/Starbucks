@@ -60,3 +60,7 @@ npm install react-scripts
 ```
 npm start
 ```
+
+### 追記
+
+メモ
