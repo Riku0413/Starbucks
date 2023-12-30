@@ -28,11 +28,11 @@ const D3Chart = ({category, sortOrder}) => {
     console.log(category)
   
     const width = 640;
-    const height = 28 * data.length;
+    const height = 84 * data.length;
     const marginTop = 20;
-    const marginRight = 0;
+    const marginRight = 100;
     const marginBottom = 30;
-    const marginLeft = 40;
+    const marginLeft = 120;
     
     // 値に単位をつけて返す関数
     const getLabelText = (d, category) => {
@@ -81,12 +81,12 @@ const D3Chart = ({category, sortOrder}) => {
         .enter()
         .append("text")
         .attr("class", "item-name") 
-        .attr("y", (d) => y(d.letter) - 5)
-        .attr("x", 45)
+        .attr("y", (d) => y(d.letter) - 15)
+        .attr("x", 120)
         .text(d => d.letter)
         .attr("font-weight", "bold")
         .attr("fill", "black")
-        .attr("font-size", "12px");
+        .attr("font-size", "17px");
   
     const images = svg.append("g").selectAll("image")
         .data(data)
@@ -94,8 +94,8 @@ const D3Chart = ({category, sortOrder}) => {
         .append("image")
         .attr("x", 0)
         .attr("y", (d) => y(d.letter) - 5)
-        .attr("width", 30) // 画像の幅
-        .attr("height", 30) // 画像の高さ
+        .attr("width", 90) // 画像の幅
+        .attr("height", 90) // 画像の高さ
         .attr("cursor", "pointer")
         .attr("xlink:href", (d) => d.円形画像URL)
         .on("click", function(e, d) {
@@ -129,10 +129,10 @@ const D3Chart = ({category, sortOrder}) => {
       .attr("class", "value") // 動的に生成したIDを割り当て
       .attr("id", (d, i) => `text-${i}`) // 動的に生成したIDを割り当て
       .attr("x", d => 10 + x(Math.max(d[`${category}_number`], 0))) // テキストのX座標（バーの右横に調整）
-      .attr("y", d => y(d.letter) + 13.7) // テキストのY座標
+      .attr("y", d => y(d.letter) + 40) // テキストのY座標
       .text(d => getLabelText(d, category))
       .attr("fill", "black")
-      .attr("font-size", "12px")
+      .attr("font-size", "30px")
       .attr("font-family", "Arial"); // フォントを指定
   
     text
@@ -160,7 +160,7 @@ const D3Chart = ({category, sortOrder}) => {
                 .attr("opacity", 0)
                 .transition(t)
                 .delay((d, i) => i * 100)
-                .attr("y", d => y(d.letter) + 13.7) // 棒グラフのソートの終了位置 y-座標
+                .attr("y", d => y(d.letter) + 40) // 棒グラフのソートの終了位置 y-座標
                 .attr("width", d => x(Math.max(d[`${category}_number`], 0)) - marginLeft)
                 .transition(t/2)
                 .attr("x", d => 10 + x(Math.max(d[`${category}_number`], 0)) + 5) // テキストのX座標（バーの右横に調整）
@@ -170,16 +170,16 @@ const D3Chart = ({category, sortOrder}) => {
                 .attr("opacity", flag)
                 .transition(t)
                 .delay((d, i) => i * 100)
-                .attr("y", d => y(d.letter) - 5) // 棒グラフのソートの終了位置 y-座標
+                .attr("y", d => y(d.letter) - 15) // 棒グラフのソートの終了位置 y-座標
                 .attr("width", d => x(Math.max(d[`${category}_number`], 0)) - marginLeft)
-                .attr("x", 45)
+                .attr("x", 120)
                 .attr("opacity", 1); // アニメーション中に不透明に変更
     
             images.data(sortedData, d => d.letter)
                 .attr("opacity", flag)
                 .transition(t)
                 .delay((d, i) => i * 100)
-                .attr("y", d => y(d.letter) - 5) // 棒グラフのソートの終了位置 y-座標
+                .attr("y", d => y(d.letter) - 15) // 棒グラフのソートの終了位置 y-座標
                 .attr("x", 0)
                 .attr("opacity", 1); // アニメーション中に不透明に変更
   
