@@ -38,9 +38,10 @@ const Page = () => {
       <Box sx={{width: '80vw'}}>
         <Box sx={{ width: '100%', fontWeight: 'bold', fontSize: '40px', display: 'flex', alignItems: 'center', justifyContent: 'left', marginLeft: '10px' }}>
           {itemCategory}
-          <div style={{fontSize: '20px', alignSelf: 'flex-end', marginBottom: '8px', marginLeft: '10px'}}>を</div>
+          {/* <div style={{fontSize: '20px', alignSelf: 'flex-end', marginBottom: '8px', marginLeft: '10px'}}>を</div> */}
         </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '80vw' }}>
+      <div style={{height:'20px'}}></div>
       <Box sx={{ width: '100%', fontWeight: 'bold', fontSize: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         栄養成分別に比較できるよ🧋
       </Box>
