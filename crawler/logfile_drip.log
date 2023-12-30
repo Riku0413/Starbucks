@@ -1,0 +1,66 @@
+2023-12-29 18:49:28,076 - INFO - Scraping the list page.
+2023-12-29 18:49:28,435 - INFO - Successfully retrieved the list of data.
+2023-12-29 18:50:29,793 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000018"
+2023-12-29 18:50:41,259 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000018
+2023-12-29 18:51:03,684 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785062870"
+2023-12-29 18:51:12,060 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785062870
+2023-12-29 18:51:25,663 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785324732"
+2023-12-29 18:51:30,120 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785324732
+2023-12-29 18:51:37,408 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785046856"
+2023-12-29 18:51:51,173 - WARNING - Failed to choose Tall size during processing "コーヒー プレス" of "https://menu.starbucks.co.jp/4524785046856"
+2023-12-29 18:51:51,248 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785046856
+2023-12-29 18:51:59,658 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000179"
+2023-12-29 18:52:02,740 - ERROR - An unexpected error occurred during scraping the data of "ポットサービス" of "https://menu.starbucks.co.jp/4524785000179": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001045a9d28 chromedriver + 4795688
+1   chromedriver                        0x00000001045a12b3 chromedriver + 4760243
+2   chromedriver                        0x000000010417a88d chromedriver + 407693
+3   chromedriver                        0x00000001041c93d9 chromedriver + 730073
+4   chromedriver                        0x00000001041c9591 chromedriver + 730513
+5   chromedriver                        0x000000010420f7e4 chromedriver + 1017828
+6   chromedriver                        0x00000001041f0ccd chromedriver + 892109
+7   chromedriver                        0x000000010420cb2b chromedriver + 1006379
+8   chromedriver                        0x00000001041f0a73 chromedriver + 891507
+9   chromedriver                        0x00000001041bb143 chromedriver + 672067
+10  chromedriver                        0x00000001041bc31e chromedriver + 676638
+11  chromedriver                        0x000000010456a795 chromedriver + 4536213
+12  chromedriver                        0x000000010456f853 chromedriver + 4556883
+13  chromedriver                        0x0000000104550001 chromedriver + 4427777
+14  chromedriver                        0x000000010457059d chromedriver + 4560285
+15  chromedriver                        0x000000010454148c chromedriver + 4367500
+16  chromedriver                        0x00000001045900e8 chromedriver + 4690152
+17  chromedriver                        0x000000010459029e chromedriver + 4690590
+18  chromedriver                        0x00000001045a0eee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff808b7b1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff808b76bd3 thread_start + 15
+
+2023-12-29 18:52:15,093 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785410183"
+2023-12-29 18:52:15,400 - ERROR - An unexpected error occurred during scraping the data of "スターバックス® コーヒートラベラー" of "https://menu.starbucks.co.jp/4524785410183": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001045a9d28 chromedriver + 4795688
+1   chromedriver                        0x00000001045a12b3 chromedriver + 4760243
+2   chromedriver                        0x000000010417a88d chromedriver + 407693
+3   chromedriver                        0x00000001041c93d9 chromedriver + 730073
+4   chromedriver                        0x00000001041c9591 chromedriver + 730513
+5   chromedriver                        0x000000010420f7e4 chromedriver + 1017828
+6   chromedriver                        0x00000001041f0ccd chromedriver + 892109
+7   chromedriver                        0x000000010420cb2b chromedriver + 1006379
+8   chromedriver                        0x00000001041f0a73 chromedriver + 891507
+9   chromedriver                        0x00000001041bb143 chromedriver + 672067
+10  chromedriver                        0x00000001041bc31e chromedriver + 676638
+11  chromedriver                        0x000000010456a795 chromedriver + 4536213
+12  chromedriver                        0x000000010456f853 chromedriver + 4556883
+13  chromedriver                        0x0000000104550001 chromedriver + 4427777
+14  chromedriver                        0x000000010457059d chromedriver + 4560285
+15  chromedriver                        0x000000010454148c chromedriver + 4367500
+16  chromedriver                        0x00000001045900e8 chromedriver + 4690152
+17  chromedriver                        0x000000010459029e chromedriver + 4690590
+18  chromedriver                        0x00000001045a0eee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff808b7b1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff808b76bd3 thread_start + 15
+
+2023-12-29 18:52:31,242 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785542563"
+2023-12-29 18:52:44,032 - WARNING - Failed to choose Tall size during processing "オリアート™ ゴールデンフォーム™ コールド ブリュー" of "https://menu.starbucks.co.jp/4524785542563"
+2023-12-29 18:52:44,090 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785542563

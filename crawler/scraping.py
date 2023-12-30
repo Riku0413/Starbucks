@@ -1,3 +1,4 @@
+import os
 import re
 import csv
 import time
@@ -22,13 +23,27 @@ URL_DRIP = "https://product.starbucks.co.jp/beverage/drip/"
 URL_ESPRESSO = "https://product.starbucks.co.jp/beverage/espresso/"
 URL_FRAPPUCCINO = "https://product.starbucks.co.jp/beverage/frappuccino/"
 URL_TEA = "https://product.starbucks.co.jp/beverage/tea/"
+
 URL_OTHERS = "https://product.starbucks.co.jp/beverage/beverage-others/"
 URL_ARRIVIAMO = "https://product.starbucks.co.jp/beverage/arriviamo/"
+
+URL_DESSERT = "https://product.starbucks.co.jp/food/dessert/"
+URL_PASTRY = "https://product.starbucks.co.jp/food/pastry/"
+URL_SANDWICH = "https://product.starbucks.co.jp/food/sandwich/"
+URL_PACKAGE = "https://product.starbucks.co.jp/food/package/"
+
+# 可変箇所１
+log_file_path = "logfile_package.log"
 
 # ロガーの用意
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+file_handler = logging.FileHandler(log_file_path, mode='a')
+file_handler.setLevel(logging.INFO)
+file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+logger.addHandler(file_handler)
 
 # リトライ処理のための変数
 max_retries = 1
@@ -80,17 +95,15 @@ def scrape_item_list(url):
 
 
 # 一つの世界遺産の詳細データの取得
-def scrape_item_detail(url):
-    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
+def scrape_item_detail(url, headers, name):
     data = [None for _ in range(len(headers))]
-    data[0] = url
 
     for attempt in range(max_retries):
         try:
             driver.get(url)
             time.sleep(0.5)
 
-            logger.info("Scraping the data of {url}")
+            logger.info(f"Scraping the data of \"{name}\" of \"{url}\"")
 
             toggle_button = driver.find_element(By.ID, 's_nutrition-calculator_accordion')
             toggle_button.click()
@@ -106,6 +119,7 @@ def scrape_item_detail(url):
                 time.sleep(2)
             
             except:
+                logger.warning(f"Failed to choose Tall size during processing \"{name}\" of \"{url}\"")
                 pass
 
             selected_html = driver.page_source
@@ -122,7 +136,7 @@ def scrape_item_detail(url):
                 # print(category, result[0], result[1])
                 data[headers.index(category)] = value
 
-            logger.info("Successfully retrieved the data of {url}")
+            logger.info(f"Successfully retrieved the data of \"{name}\" of \"{url}\"")
 
         except requests.exceptions.RequestException as e:
             logger.error(f"An error occurred during the request of \"{url}\": {str(e)}")
@@ -135,30 +149,40 @@ def scrape_item_detail(url):
             return
 
         except Exception as e:
-            logger.error(f"An unexpected error occurred during scraping the data of \"{url}\": {str(e)}")
-            return
+            logger.error(f"An unexpected error occurred during scraping the data of \"{name}\" of \"{url}\": {str(e)}")
+            pass
 
         return data
 
 
 def main(): 
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument('category', choices=['cultural', 'mixed', 'natural'])
-    # args = parser.parse_args()
-    # category = args.category
-    csv_file_path = "result.csv"
+    parser = argparse.ArgumentParser()
+    parser.add_argument('skip', type=int, default=0, help='整数引数（デフォルト: 0）')
+    args = parser.parse_args()
+    skip = args.skip
+    csv_file_path = "../data/result.csv"
 
-    headers = ["商品名", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
+    headers = ["大ジャンル", "商品カテゴリ", "商品名", "長方形画像URL", "円形画像URL", "商品URL", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン", "お酒の使用"]
+    
+    if not os.path.isfile(csv_file_path):
+        with open(csv_file_path, mode='w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(headers)
 
-    with open(csv_file_path, mode='w', newline='') as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(headers)
+    # 可変箇所２
+    lst = scrape_item_list(URL_PACKAGE)
 
-    lst = scrape_item_list(URL_FRAPPUCCINO)
+    for i, item in enumerate(lst):
+        if i < skip:
+            continue
 
-    for item in lst:
-        data = scrape_item_detail(item[2])
-        data[0] = item[0]
+        data = scrape_item_detail(item[2], headers, item[0])
+        # 可変箇所３
+        data[0] = "フード"
+        data[1] = "パッケージフード"
+        data[2] = item[0]
+        data[3] = item[1]
+        data[5] = item[2]
 
         with open(csv_file_path, mode='a', newline='') as csvfile:
             csv_writer = csv.writer(csvfile)
