@@ -1,0 +1,95 @@
+2023-12-29 18:28:29,499 - INFO - Scraping the list page.
+2023-12-29 18:28:29,852 - INFO - Successfully retrieved the list of data.
+2023-12-29 18:29:40,010 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785556560"
+2023-12-29 18:30:00,108 - WARNING - Failed to choose Tall size during processing "ほうじ茶 もちっと ミルク フラペチーノ®" of "https://menu.starbucks.co.jp/4524785556560"
+2023-12-29 18:30:00,225 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785556560
+2023-12-29 18:30:45,860 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785344143"
+2023-12-29 18:30:56,420 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785344143
+2023-12-29 18:31:17,437 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785165731"
+2023-12-29 18:31:23,834 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785165731
+2023-12-29 18:31:37,299 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785166059"
+2023-12-29 18:31:43,475 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785166059
+2023-12-29 18:31:53,582 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785165816"
+2023-12-29 18:31:53,776 - ERROR - An unexpected error occurred during scraping the data of "キャラメル フラペチーノ®" of "https://menu.starbucks.co.jp/4524785165816": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100ee7d28 chromedriver + 4795688
+1   chromedriver                        0x0000000100edf2b3 chromedriver + 4760243
+2   chromedriver                        0x0000000100ab888d chromedriver + 407693
+3   chromedriver                        0x0000000100b073d9 chromedriver + 730073
+4   chromedriver                        0x0000000100b07591 chromedriver + 730513
+5   chromedriver                        0x0000000100b4d7e4 chromedriver + 1017828
+6   chromedriver                        0x0000000100b2eccd chromedriver + 892109
+7   chromedriver                        0x0000000100b4ab2b chromedriver + 1006379
+8   chromedriver                        0x0000000100b2ea73 chromedriver + 891507
+9   chromedriver                        0x0000000100af9143 chromedriver + 672067
+10  chromedriver                        0x0000000100afa31e chromedriver + 676638
+11  chromedriver                        0x0000000100ea8795 chromedriver + 4536213
+12  chromedriver                        0x0000000100ead853 chromedriver + 4556883
+13  chromedriver                        0x0000000100e8e001 chromedriver + 4427777
+14  chromedriver                        0x0000000100eae59d chromedriver + 4560285
+15  chromedriver                        0x0000000100e7f48c chromedriver + 4367500
+16  chromedriver                        0x0000000100ece0e8 chromedriver + 4690152
+17  chromedriver                        0x0000000100ece29e chromedriver + 4690590
+18  chromedriver                        0x0000000100edeeee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff808b7b1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff808b76bd3 thread_start + 15
+
+2023-12-29 18:32:01,419 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785165892"
+2023-12-29 18:32:09,691 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785165892
+2023-12-29 18:32:37,785 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785165939"
+2023-12-29 18:32:43,083 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785165939
+2023-12-29 18:33:02,937 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785118751"
+2023-12-29 18:33:08,993 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785118751
+2023-12-29 18:33:32,493 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785517479"
+2023-12-29 18:33:45,259 - WARNING - Failed to choose Tall size during processing "My フルーツ³ フラペチーノ® グレープ ＆ ピーチ" of "https://menu.starbucks.co.jp/4524785517479"
+2023-12-29 18:33:45,321 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785517479
+2023-12-29 18:34:09,106 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785479791"
+2023-12-29 18:34:22,248 - WARNING - Failed to choose Tall size during processing "My フルーツ³ フラペチーノ® ストロベリー" of "https://menu.starbucks.co.jp/4524785479791"
+2023-12-29 18:34:22,308 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785479791
+2023-12-29 18:34:39,142 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785487345"
+2023-12-29 18:34:39,709 - ERROR - An unexpected error occurred during scraping the data of "和三蜜 アーモンドミルク フラペチーノ®" of "https://menu.starbucks.co.jp/4524785487345": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100ee7d28 chromedriver + 4795688
+1   chromedriver                        0x0000000100edf2b3 chromedriver + 4760243
+2   chromedriver                        0x0000000100ab888d chromedriver + 407693
+3   chromedriver                        0x0000000100b073d9 chromedriver + 730073
+4   chromedriver                        0x0000000100b07591 chromedriver + 730513
+5   chromedriver                        0x0000000100b4d7e4 chromedriver + 1017828
+6   chromedriver                        0x0000000100b2eccd chromedriver + 892109
+7   chromedriver                        0x0000000100b4ab2b chromedriver + 1006379
+8   chromedriver                        0x0000000100b2ea73 chromedriver + 891507
+9   chromedriver                        0x0000000100af9143 chromedriver + 672067
+10  chromedriver                        0x0000000100afa31e chromedriver + 676638
+11  chromedriver                        0x0000000100ea8795 chromedriver + 4536213
+12  chromedriver                        0x0000000100ead853 chromedriver + 4556883
+13  chromedriver                        0x0000000100e8e001 chromedriver + 4427777
+14  chromedriver                        0x0000000100eae59d chromedriver + 4560285
+15  chromedriver                        0x0000000100e7f48c chromedriver + 4367500
+16  chromedriver                        0x0000000100ece0e8 chromedriver + 4690152
+17  chromedriver                        0x0000000100ece29e chromedriver + 4690590
+18  chromedriver                        0x0000000100edeeee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff808b7b1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff808b76bd3 thread_start + 15
+
+2023-12-29 18:35:07,167 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785324671"
+2023-12-29 18:35:12,675 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785324671
+2023-12-29 18:35:41,566 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785445543"
+2023-12-29 18:35:54,279 - WARNING - Failed to choose Tall size during processing "ゆず & シトラス ラベンダー セージ ティー フラペチーノ®" of "https://menu.starbucks.co.jp/4524785445543"
+2023-12-29 18:35:54,342 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785445543
+2023-12-29 18:36:23,372 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785445550"
+2023-12-29 18:36:36,540 - WARNING - Failed to choose Tall size during processing "ストロベリー & パッション ティー フラペチーノ®" of "https://menu.starbucks.co.jp/4524785445550"
+2023-12-29 18:36:36,601 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785445550
+2023-12-29 18:37:09,776 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785445581"
+2023-12-29 18:37:22,871 - WARNING - Failed to choose Tall size during processing "和三蜜 抹茶 フラペチーノ®" of "https://menu.starbucks.co.jp/4524785445581"
+2023-12-29 18:37:22,938 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785445581
+2023-12-29 18:37:54,002 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785445598"
+2023-12-29 18:38:07,049 - WARNING - Failed to choose Tall size during processing "和三蜜 ほうじ茶 フラペチーノ®" of "https://menu.starbucks.co.jp/4524785445598"
+2023-12-29 18:38:07,114 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785445598
+2023-12-29 18:38:35,397 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785526518"
+2023-12-29 18:38:48,471 - WARNING - Failed to choose Tall size during processing "ジョイフルメドレー ティー  ラテ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785526518"
+2023-12-29 18:38:48,594 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785526518
+2023-12-29 18:39:16,782 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785546974"
+2023-12-29 18:39:29,641 - WARNING - Failed to choose Tall size during processing "My フルーツ³ フラペチーノ® オレンジ & パッションフルーツ" of "https://menu.starbucks.co.jp/4524785546974"
+2023-12-29 18:39:29,707 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785546974

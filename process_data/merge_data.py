@@ -14,4 +14,4 @@ for column in df2.columns:
 merged_df = pd.concat([merged_df, df2], axis=0, ignore_index=True)
 
 # 結合結果をCSVファイルとして保存
-merged_df.to_csv('merged_data.csv', index=False)
+merged_df.to_csv('../data/test_data.csv', index=False)

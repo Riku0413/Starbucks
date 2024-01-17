@@ -2,8 +2,8 @@
 
 ## このリポジトリについて
 
-- スターバックスの商品データを取得して可視化します
-- 最終的に健康への害が最小の注文方法を提案します
+- スターバックスの商品データを取得して可視化しました。
+- 商品の写真を押すとスタバの公式サイトに遷移できます！
 
 ## フォルダ構造
 
@@ -11,8 +11,9 @@
 Starbucks
  ┣━ crawler
  ┣━ data
- ┣━ my-app
+ ┣━ my-app-2
  ┣━ process_data
+ ┣━ process_image
  ┗━ test_d3
 ```
 
@@ -27,7 +28,7 @@ Starbucks
 - 倉庫
 - 使用しているデータをCSV形式で保持
 
-### 3. my-app
+### 3. my-app-2
 
 - ライブ会場
 - Reactアプリケーション
@@ -37,21 +38,26 @@ Starbucks
 - 工房
 - データの加工プログラム
 
-### 5. test_d3
+### 5. process_image
+
+- 工房2
+- データの加工プログラム
+
+### 6. test_d3
 
 - 実験室
 - d3の機能のテストと実験、および機能拡張
 
 ## 起動方法
 
-### ＜一般ユーザー向け＞
+### ＜ユーザー向け＞
 
 - 以下のリンクからアクセス
-  - https://starbucks-pusozzw9e-riku0413s-projects.vercel.app/
+  - [React App](https://starbucks-pusozzw9e-riku0413s-projects.vercel.app/)
 
 ### ＜開発者向け＞
 
-- my-appディレクトリで以下のコマンドを実行
+- my-app-2 ディレクトリで以下のコマンドを実行
 
 ```
 npm install react-scripts

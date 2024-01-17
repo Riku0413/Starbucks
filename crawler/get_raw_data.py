@@ -1,8 +1,6 @@
-import chardet
 import re
 import csv
 import time
-import argparse
 import logging
 import requests
 from bs4 import BeautifulSoup
@@ -36,8 +34,8 @@ def extract_value_unit(input_string):
 
 
 def scrape_data(url, csv_file_path):
-    headers = ["大ジャンル", "販売カテゴリ", "商品カテゴリ", "商品名", "ミルクカスタム", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
-    # headers = ["大ジャンル", "販売カテゴリ", "商品カテゴリ", "商品名", "ミルクカスタム", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "お酒の使用"]
+    # headers = ["大ジャンル", "販売カテゴリ", "商品カテゴリ", "商品名", "ミルクカスタム", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン"]
+    headers = ["大ジャンル", "販売カテゴリ", "商品カテゴリ", "商品名", "ミルクカスタム", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "お酒の使用"]
 
     category = ""
     shop_category = ""
@@ -58,9 +56,9 @@ def scrape_data(url, csv_file_path):
             selected_html = driver.page_source
             soup = BeautifulSoup(selected_html, 'html.parser')
             # element_1 = soup.find("div", class_='beverage-STARBUCKS')
-            # element_1 = soup.find("div", class_='food-STARBUCKS')
+            element_1 = soup.find("div", class_='food-STARBUCKS')
             # element_1 = soup.find("div", class_='beverage-RESERVE')
-            element_1 = soup.find("div", class_='beverage-ROASTERY')
+            # element_1 = soup.find("div", class_='beverage-ROASTERY')
             element_2 = element_1.find_all("div", class_="alle-l-outer")
 
             print(f"length of elements: {len(element_2)}")
@@ -93,12 +91,12 @@ def scrape_data(url, csv_file_path):
                                 item = tr.find("th", class_="is-product").find("span").text
                                 print(f"item: {item}")
                             data[3] = item
-                            if "tr-milk" in tr.get("class", []):
-                                milk = tr.find("span").text
-                            else:
-                                milk = ""
-                            print(f"milk: {milk}")
-                            data[4] = milk
+                            # if "tr-milk" in tr.get("class", []):
+                            #     milk = tr.find("span").text
+                            # else:
+                            #     milk = ""
+                            # print(f"milk: {milk}")
+                            # data[4] = milk
                             td_elements = tr.find_all("td")
                             if len(td_elements) > 0:
                                 print(f"length of td: {len(td_elements)}")
@@ -134,7 +132,8 @@ def scrape_data(url, csv_file_path):
 
 
 def main(): 
-    csv_file_path = "beverage.csv"
+    # csv_file_path = "../data/beverage.csv"
+    csv_file_path = "../data/food.csv"
 
     scrape_data(URL, csv_file_path)
 

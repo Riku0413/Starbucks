@@ -1,0 +1,35 @@
+2023-12-29 18:56:42,365 - INFO - Scraping the list page.
+2023-12-29 18:56:42,746 - INFO - Successfully retrieved the list of data.
+2023-12-29 18:57:52,325 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785033153"
+2023-12-29 18:58:01,745 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785033153
+2023-12-29 18:58:25,922 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000223"
+2023-12-29 18:58:34,744 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000223
+2023-12-29 18:58:50,794 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785047396"
+2023-12-29 18:58:55,547 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785047396
+2023-12-29 18:59:03,646 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785433106"
+2023-12-29 18:59:09,217 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785433106
+2023-12-29 18:59:25,171 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785433021"
+2023-12-29 18:59:32,608 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785433021
+2023-12-29 18:59:46,898 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000285"
+2023-12-29 18:59:52,163 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000285
+2023-12-29 19:00:08,267 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000254"
+2023-12-29 19:00:14,949 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000254
+2023-12-29 19:00:59,679 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785034532"
+2023-12-29 19:01:06,080 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785034532
+2023-12-29 19:01:30,757 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785019232"
+2023-12-29 19:01:36,405 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785019232
+2023-12-29 19:02:02,037 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000315"
+2023-12-29 19:02:07,874 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000315
+2023-12-29 19:02:33,114 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785000346"
+2023-12-29 19:02:47,832 - WARNING - Failed to choose Tall size during processing "エスプレッソ" of "https://menu.starbucks.co.jp/4524785000346"
+2023-12-29 19:02:47,894 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785000346
+2023-12-29 19:03:16,495 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785487253"
+2023-12-29 19:03:21,845 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785487253
+2023-12-29 19:03:49,514 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785457690"
+2023-12-29 19:04:02,749 - WARNING - Failed to choose Tall size during processing "トリプルエスプレッソ ラテ" of "https://menu.starbucks.co.jp/4524785457690"
+2023-12-29 19:04:02,819 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785457690
+2023-12-29 19:04:26,547 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785544406"
+2023-12-29 19:04:39,463 - WARNING - Failed to choose Tall size during processing "オリアート™ オーツミルク ラテ" of "https://menu.starbucks.co.jp/4524785544406"
+2023-12-29 19:04:39,521 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785544406
+2023-12-29 19:05:06,449 - INFO - Scraping the data of "https://menu.starbucks.co.jp/4524785548541"
+2023-12-29 19:05:12,340 - INFO - Successfully retrieved the data of https://menu.starbucks.co.jp/4524785548541

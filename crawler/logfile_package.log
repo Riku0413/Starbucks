@@ -1,0 +1,52 @@
+2023-12-29 20:33:13,800 - INFO - Scraping the list page.
+2023-12-29 20:33:14,218 - INFO - Successfully retrieved the list of data.
+2023-12-29 20:34:17,858 - INFO - Scraping the data of "ブラウニー" of "https://menu.starbucks.co.jp/4524785549845"
+2023-12-29 20:34:34,047 - WARNING - Failed to choose Tall size during processing "ブラウニー" of "https://menu.starbucks.co.jp/4524785549845"
+2023-12-29 20:34:34,157 - INFO - Successfully retrieved the data of "ブラウニー" of "https://menu.starbucks.co.jp/4524785549845"
+2023-12-29 20:35:00,171 - INFO - Scraping the data of "チョコレートチャンククッキー" of "https://menu.starbucks.co.jp/4524785508422"
+2023-12-29 20:35:14,591 - WARNING - Failed to choose Tall size during processing "チョコレートチャンククッキー" of "https://menu.starbucks.co.jp/4524785508422"
+2023-12-29 20:35:14,654 - INFO - Successfully retrieved the data of "チョコレートチャンククッキー" of "https://menu.starbucks.co.jp/4524785508422"
+2023-12-29 20:35:23,362 - INFO - Scraping the data of "ホワイトチョコレートチャンク＆マカダミアクッキー" of "https://menu.starbucks.co.jp/4524785508439"
+2023-12-29 20:35:38,689 - WARNING - Failed to choose Tall size during processing "ホワイトチョコレートチャンク＆マカダミアクッキー" of "https://menu.starbucks.co.jp/4524785508439"
+2023-12-29 20:35:38,749 - INFO - Successfully retrieved the data of "ホワイトチョコレートチャンク＆マカダミアクッキー" of "https://menu.starbucks.co.jp/4524785508439"
+2023-12-29 20:35:52,147 - INFO - Scraping the data of "バウムクーヘン" of "https://menu.starbucks.co.jp/4524785508415"
+2023-12-29 20:36:04,885 - WARNING - Failed to choose Tall size during processing "バウムクーヘン" of "https://menu.starbucks.co.jp/4524785508415"
+2023-12-29 20:36:04,958 - INFO - Successfully retrieved the data of "バウムクーヘン" of "https://menu.starbucks.co.jp/4524785508415"
+2023-12-29 20:36:12,074 - INFO - Scraping the data of "アーモンドフロランタン" of "https://menu.starbucks.co.jp/4524785508446"
+2023-12-29 20:36:25,497 - WARNING - Failed to choose Tall size during processing "アーモンドフロランタン" of "https://menu.starbucks.co.jp/4524785508446"
+2023-12-29 20:36:25,550 - INFO - Successfully retrieved the data of "アーモンドフロランタン" of "https://menu.starbucks.co.jp/4524785508446"
+2023-12-29 20:36:32,439 - INFO - Scraping the data of "キャラメルポップコーン&プレッツェル" of "https://menu.starbucks.co.jp/4524785542655"
+2023-12-29 20:36:45,514 - WARNING - Failed to choose Tall size during processing "キャラメルポップコーン&プレッツェル" of "https://menu.starbucks.co.jp/4524785542655"
+2023-12-29 20:36:45,572 - INFO - Successfully retrieved the data of "キャラメルポップコーン&プレッツェル" of "https://menu.starbucks.co.jp/4524785542655"
+2023-12-29 20:37:02,344 - INFO - Scraping the data of "ポテトチップス シーソルト" of "https://menu.starbucks.co.jp/4524785522596"
+2023-12-29 20:37:14,764 - WARNING - Failed to choose Tall size during processing "ポテトチップス シーソルト" of "https://menu.starbucks.co.jp/4524785522596"
+2023-12-29 20:37:14,841 - INFO - Successfully retrieved the data of "ポテトチップス シーソルト" of "https://menu.starbucks.co.jp/4524785522596"
+2023-12-29 20:37:49,627 - INFO - Scraping the data of "4種のクッキーアソートボックス" of "https://menu.starbucks.co.jp/4524785553934"
+2023-12-29 20:38:05,723 - WARNING - Failed to choose Tall size during processing "4種のクッキーアソートボックス" of "https://menu.starbucks.co.jp/4524785553934"
+2023-12-29 20:38:05,783 - INFO - Successfully retrieved the data of "4種のクッキーアソートボックス" of "https://menu.starbucks.co.jp/4524785553934"
+2023-12-29 20:38:24,415 - INFO - Scraping the data of "スターバックス オリガミ®&バウムクーヘンアソートセット" of "https://menu.starbucks.co.jp/4524785560307"
+2023-12-29 20:38:25,397 - ERROR - An unexpected error occurred during scraping the data of "スターバックス オリガミ®&バウムクーヘンアソートセット" of "https://menu.starbucks.co.jp/4524785560307": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001029b6d28 chromedriver + 4795688
+1   chromedriver                        0x00000001029ae2b3 chromedriver + 4760243
+2   chromedriver                        0x000000010258788d chromedriver + 407693
+3   chromedriver                        0x00000001025d63d9 chromedriver + 730073
+4   chromedriver                        0x00000001025d6591 chromedriver + 730513
+5   chromedriver                        0x000000010261c7e4 chromedriver + 1017828
+6   chromedriver                        0x00000001025fdccd chromedriver + 892109
+7   chromedriver                        0x0000000102619b2b chromedriver + 1006379
+8   chromedriver                        0x00000001025fda73 chromedriver + 891507
+9   chromedriver                        0x00000001025c8143 chromedriver + 672067
+10  chromedriver                        0x00000001025c931e chromedriver + 676638
+11  chromedriver                        0x0000000102977795 chromedriver + 4536213
+12  chromedriver                        0x000000010297c853 chromedriver + 4556883
+13  chromedriver                        0x000000010295d001 chromedriver + 4427777
+14  chromedriver                        0x000000010297d59d chromedriver + 4560285
+15  chromedriver                        0x000000010294e48c chromedriver + 4367500
+16  chromedriver                        0x000000010299d0e8 chromedriver + 4690152
+17  chromedriver                        0x000000010299d29e chromedriver + 4690590
+18  chromedriver                        0x00000001029adeee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff808b7b1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff808b76bd3 thread_start + 15
+
