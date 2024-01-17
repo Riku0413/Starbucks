@@ -3,7 +3,7 @@ import pandas as pd
 
 def main():
     # CSVファイルのパス
-    csv_file_path = '../data/ex_data.csv'
+    csv_file_path = '../data/ex_data_2.csv'
 
     # CSVファイルを読み込む
     df = pd.read_csv(csv_file_path)
@@ -42,7 +42,7 @@ def main():
     df['不健康偏差値'] = df[columns_to_average_2].mean(axis=1).round(3)
 
     # 変換後のデータフレームをCSVに保存
-    df.to_csv('../data/ex_data.csv', index=False)
+    df.to_csv('../data/ex_data_2.csv', index=False)
 
     target_column_name_1 = '健康偏差値'
     target_column_name_2 = '不健康偏差値'

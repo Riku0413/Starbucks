@@ -8,7 +8,7 @@ import uuid
 import pandas as pd
 
 
-log_file_path = "logfile.log"
+log_file_path = "logfile_make_circle_image_20240117.log"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)

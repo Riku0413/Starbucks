@@ -9,7 +9,7 @@ def extract_value_unit(input_string):
 
 def main():
     # CSVファイルの読み込み
-    with open('../data/result.csv', 'r') as csv_file:
+    with open('../data/ex_data.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         
         # ヘッダーをスキップする
@@ -35,7 +35,7 @@ def main():
             processed_data_list.append(new_data)
 
     # 新しいCSVファイルの書き込み
-    with open('../data/processed.csv', 'w', newline='') as csv_file:
+    with open('../data/ex_data_2.csv', 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         
         # ヘッダーを書き込む

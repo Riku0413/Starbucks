@@ -32,8 +32,10 @@ URL_PASTRY = "https://product.starbucks.co.jp/food/pastry/"
 URL_SANDWICH = "https://product.starbucks.co.jp/food/sandwich/"
 URL_PACKAGE = "https://product.starbucks.co.jp/food/package/"
 
+URL_SEASON = "https://product.starbucks.co.jp/new/lineup/?purchase_methods=STARBUCKS_COFFEE"
+
 # 可変箇所１
-log_file_path = "logfile_package.log"
+log_file_path = "logfile_20240117.log"
 
 # ロガーの用意
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -160,7 +162,7 @@ def main():
     parser.add_argument('skip', type=int, default=0, help='整数引数（デフォルト: 0）')
     args = parser.parse_args()
     skip = args.skip
-    csv_file_path = "../data/result.csv"
+    csv_file_path = "../data/result_20240117.csv"
 
     headers = ["大ジャンル", "商品カテゴリ", "商品名", "長方形画像URL", "円形画像URL", "商品URL", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン", "お酒の使用"]
     
@@ -172,9 +174,15 @@ def main():
     # 可変箇所２
     lst = scrape_item_list(URL_PACKAGE)
 
+    # print(lst)
+
     for i, item in enumerate(lst):
         if i < skip:
             continue
+
+        # 臨時処理
+        if i == 8:
+            break
 
         data = scrape_item_detail(item[2], headers, item[0])
         # 可変箇所３

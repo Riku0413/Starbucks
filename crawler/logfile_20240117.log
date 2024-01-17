@@ -1,0 +1,91 @@
+2024-01-17 08:25:35,247 - INFO - Scraping the list page.
+2024-01-17 08:25:45,523 - ERROR - An unexpected error occurred during scraping: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010128ed28 chromedriver + 4795688
+1   chromedriver                        0x00000001012862b3 chromedriver + 4760243
+2   chromedriver                        0x0000000100e5f88d chromedriver + 407693
+3   chromedriver                        0x0000000100eae3d9 chromedriver + 730073
+4   chromedriver                        0x0000000100eae591 chromedriver + 730513
+5   chromedriver                        0x0000000100ef47e4 chromedriver + 1017828
+6   chromedriver                        0x0000000100ed5ccd chromedriver + 892109
+7   chromedriver                        0x0000000100ef1b2b chromedriver + 1006379
+8   chromedriver                        0x0000000100ed5a73 chromedriver + 891507
+9   chromedriver                        0x0000000100ea0143 chromedriver + 672067
+10  chromedriver                        0x0000000100ea131e chromedriver + 676638
+11  chromedriver                        0x000000010124f795 chromedriver + 4536213
+12  chromedriver                        0x0000000101254853 chromedriver + 4556883
+13  chromedriver                        0x0000000101235001 chromedriver + 4427777
+14  chromedriver                        0x000000010125559d chromedriver + 4560285
+15  chromedriver                        0x000000010122648c chromedriver + 4367500
+16  chromedriver                        0x00000001012750e8 chromedriver + 4690152
+17  chromedriver                        0x000000010127529e chromedriver + 4690590
+18  chromedriver                        0x0000000101285eee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff81594f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff81594abd3 thread_start + 15
+
+2024-01-17 08:27:41,490 - INFO - Scraping the list page.
+2024-01-17 08:27:51,803 - ERROR - An unexpected error occurred during scraping: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104d6cd28 chromedriver + 4795688
+1   chromedriver                        0x0000000104d642b3 chromedriver + 4760243
+2   chromedriver                        0x000000010493d88d chromedriver + 407693
+3   chromedriver                        0x000000010498c3d9 chromedriver + 730073
+4   chromedriver                        0x000000010498c591 chromedriver + 730513
+5   chromedriver                        0x00000001049d27e4 chromedriver + 1017828
+6   chromedriver                        0x00000001049b3ccd chromedriver + 892109
+7   chromedriver                        0x00000001049cfb2b chromedriver + 1006379
+8   chromedriver                        0x00000001049b3a73 chromedriver + 891507
+9   chromedriver                        0x000000010497e143 chromedriver + 672067
+10  chromedriver                        0x000000010497f31e chromedriver + 676638
+11  chromedriver                        0x0000000104d2d795 chromedriver + 4536213
+12  chromedriver                        0x0000000104d32853 chromedriver + 4556883
+13  chromedriver                        0x0000000104d13001 chromedriver + 4427777
+14  chromedriver                        0x0000000104d3359d chromedriver + 4560285
+15  chromedriver                        0x0000000104d0448c chromedriver + 4367500
+16  chromedriver                        0x0000000104d530e8 chromedriver + 4690152
+17  chromedriver                        0x0000000104d5329e chromedriver + 4690590
+18  chromedriver                        0x0000000104d63eee chromedriver + 4759278
+19  libsystem_pthread.dylib             0x00007ff81594f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff81594abd3 thread_start + 15
+
+2024-01-17 08:45:12,886 - INFO - Scraping the list page.
+2024-01-17 08:45:12,943 - INFO - Successfully retrieved the list of data.
+2024-01-17 08:45:18,671 - INFO - Scraping the data of "ジャンドゥーヤ チョコレート モカ" of "https://menu.starbucks.co.jp/4524785556713"
+2024-01-17 08:45:23,436 - INFO - Successfully retrieved the data of "ジャンドゥーヤ チョコレート モカ" of "https://menu.starbucks.co.jp/4524785556713"
+2024-01-17 08:48:57,334 - INFO - Scraping the list page.
+2024-01-17 08:48:57,403 - INFO - Successfully retrieved the list of data.
+2024-01-17 08:49:03,249 - INFO - Scraping the data of "オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515017"
+2024-01-17 08:49:15,932 - WARNING - Failed to choose Tall size during processing "オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515017"
+2024-01-17 08:49:15,997 - INFO - Successfully retrieved the data of "オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515017"
+2024-01-17 08:49:17,492 - INFO - Scraping the data of "ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515031"
+2024-01-17 08:49:29,909 - WARNING - Failed to choose Tall size during processing "ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515031"
+2024-01-17 08:49:29,967 - INFO - Successfully retrieved the data of "ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785515031"
+2024-01-17 10:02:17,392 - INFO - Scraping the list page.
+2024-01-17 10:02:17,456 - INFO - Successfully retrieved the list of data.
+2024-01-17 10:02:24,925 - INFO - Scraping the data of "ニューヨークチーズケーキ" of "https://menu.starbucks.co.jp/4524785308985"
+2024-01-17 10:02:37,379 - WARNING - Failed to choose Tall size during processing "ニューヨークチーズケーキ" of "https://menu.starbucks.co.jp/4524785308985"
+2024-01-17 10:02:37,437 - INFO - Successfully retrieved the data of "ニューヨークチーズケーキ" of "https://menu.starbucks.co.jp/4524785308985"
+2024-01-17 10:02:39,187 - INFO - Scraping the data of "生チョコ in チョコレートパイ" of "https://menu.starbucks.co.jp/4524785558151"
+2024-01-17 10:02:51,639 - WARNING - Failed to choose Tall size during processing "生チョコ in チョコレートパイ" of "https://menu.starbucks.co.jp/4524785558151"
+2024-01-17 10:02:51,688 - INFO - Successfully retrieved the data of "生チョコ in チョコレートパイ" of "https://menu.starbucks.co.jp/4524785558151"
+2024-01-17 10:10:17,513 - INFO - Scraping the list page.
+2024-01-17 10:10:17,576 - INFO - Successfully retrieved the list of data.
+2024-01-17 10:10:23,262 - INFO - Scraping the data of "チョコレートの米粉マフィン" of "https://menu.starbucks.co.jp/4524785558106"
+2024-01-17 10:10:36,043 - WARNING - Failed to choose Tall size during processing "チョコレートの米粉マフィン" of "https://menu.starbucks.co.jp/4524785558106"
+2024-01-17 10:10:36,091 - INFO - Successfully retrieved the data of "チョコレートの米粉マフィン" of "https://menu.starbucks.co.jp/4524785558106"
+2024-01-17 10:10:37,840 - INFO - Scraping the data of "チョコレートクリームドーナツ" of "https://menu.starbucks.co.jp/4524785511187"
+2024-01-17 10:10:50,252 - WARNING - Failed to choose Tall size during processing "チョコレートクリームドーナツ" of "https://menu.starbucks.co.jp/4524785511187"
+2024-01-17 10:10:50,301 - INFO - Successfully retrieved the data of "チョコレートクリームドーナツ" of "https://menu.starbucks.co.jp/4524785511187"
+2024-01-17 10:10:52,170 - INFO - Scraping the data of "クッキーとチョコレートのパウンドケーキ" of "https://menu.starbucks.co.jp/4524785527829"
+2024-01-17 10:11:04,723 - WARNING - Failed to choose Tall size during processing "クッキーとチョコレートのパウンドケーキ" of "https://menu.starbucks.co.jp/4524785527829"
+2024-01-17 10:11:04,784 - INFO - Successfully retrieved the data of "クッキーとチョコレートのパウンドケーキ" of "https://menu.starbucks.co.jp/4524785527829"
+2024-01-17 10:13:22,283 - INFO - Scraping the list page.
+2024-01-17 10:13:22,340 - INFO - Successfully retrieved the list of data.
+2024-01-17 10:13:28,298 - INFO - Scraping the data of "照り焼きチキン 石窯フィローネ" of "https://menu.starbucks.co.jp/4524785561571"
+2024-01-17 10:13:40,950 - WARNING - Failed to choose Tall size during processing "照り焼きチキン 石窯フィローネ" of "https://menu.starbucks.co.jp/4524785561571"
+2024-01-17 10:13:41,012 - INFO - Successfully retrieved the data of "照り焼きチキン 石窯フィローネ" of "https://menu.starbucks.co.jp/4524785561571"
+2024-01-17 10:14:42,890 - INFO - Scraping the list page.
+2024-01-17 10:14:42,983 - INFO - Successfully retrieved the list of data.
+2024-01-17 10:14:49,123 - INFO - Scraping the data of "2種のストロベリーチョコレート" of "https://menu.starbucks.co.jp/4524785554092"
+2024-01-17 10:15:01,763 - WARNING - Failed to choose Tall size during processing "2種のストロベリーチョコレート" of "https://menu.starbucks.co.jp/4524785554092"
+2024-01-17 10:15:01,818 - INFO - Successfully retrieved the data of "2種のストロベリーチョコレート" of "https://menu.starbucks.co.jp/4524785554092"
