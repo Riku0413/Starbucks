@@ -1,0 +1,13 @@
+2024-02-01 12:05:12,495 - INFO - Scraping the list page.
+2024-02-01 12:05:12,808 - INFO - Successfully retrieved the list of data.
+2024-02-01 12:05:59,282 - INFO - Scraping the data of "ルージュ オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561458"
+2024-02-01 12:06:15,391 - WARNING - Failed to choose Tall size during processing "ルージュ オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561458"
+2024-02-01 12:06:15,505 - INFO - Successfully retrieved the data of "ルージュ オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561458"
+2024-02-01 12:06:34,196 - INFO - Scraping the data of "ルージュ ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561465"
+2024-02-01 12:06:48,597 - WARNING - Failed to choose Tall size during processing "ルージュ ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561465"
+2024-02-01 12:06:48,665 - INFO - Successfully retrieved the data of "ルージュ ホワイト オペラ フラペチーノ®" of "https://menu.starbucks.co.jp/4524785561465"
+2024-02-01 12:09:21,551 - INFO - Scraping the list page.
+2024-02-01 12:09:21,796 - INFO - Successfully retrieved the list of data.
+2024-02-01 12:10:13,851 - INFO - Scraping the data of "チョコレートケーキ" of "https://menu.starbucks.co.jp/4524785527805"
+2024-02-01 12:10:32,815 - WARNING - Failed to choose Tall size during processing "チョコレートケーキ" of "https://menu.starbucks.co.jp/4524785527805"
+2024-02-01 12:10:32,921 - INFO - Successfully retrieved the data of "チョコレートケーキ" of "https://menu.starbucks.co.jp/4524785527805"

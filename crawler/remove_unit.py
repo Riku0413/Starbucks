@@ -35,7 +35,7 @@ def main():
             processed_data_list.append(new_data)
 
     # 新しいCSVファイルの書き込み
-    with open('../data/ex_data_2.csv', 'w', newline='') as csv_file:
+    with open('../data/ex_data_3.csv', 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         
         # ヘッダーを書き込む

@@ -57,7 +57,19 @@ Starbucks
 
 ### ＜開発者向け＞
 
-- my-app-2 ディレクトリで以下のコマンドを実行
+#### 1. 環境設定（これは要らないかも）
+
+以下によりnode.jsのバージョンを設定
+```
+asdf local nodejs 18.18.0
+```
+
+以下により確認
+```
+asdf list
+```
+
+#### 2. my-app-2 ディレクトリで以下のコマンドを実行
 
 ```
 npm install react-scripts

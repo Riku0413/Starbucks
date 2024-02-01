@@ -8,7 +8,8 @@ import uuid
 import pandas as pd
 
 
-log_file_path = "logfile_make_circle_image_20240117.log"
+# 可変箇所１
+log_file_path = "./logfile/logfile_make_circle_image_20240201.log"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)
@@ -45,8 +46,9 @@ def crop_to_circle(img, output_path):
 
 
 def main():
-    csv_path = "../data/ex_data.csv"
-    output_folder = "../image/ex"
+    # 可変箇所２
+    csv_path = "../data/result_20240201.csv"
+    output_folder = "../image/current"
 
     # CSVファイルを読み込む
     df = pd.read_csv(csv_path)
@@ -85,7 +87,7 @@ def main():
 
     df['円形画像URL'] = image_filenames
 
-    df.to_csv('../data/ex_data.csv', index=False)
+    df.to_csv('../data/result_20240201.csv', index=False)
 
 
 if __name__ == "__main__":

@@ -14,10 +14,14 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
 
+from webdriver_manager.chrome import ChromeDriverManager
 
-chrome_driver_path = '/Users/kobayashiriku/opt/anaconda3/lib/python3.9/site-packages/chromedriver_binary/chromedriver'
+
+# chrome_driver_path = '/Users/kobayashiriku/opt/anaconda3/lib/python3.9/site-packages/chromedriver_binary/chromedriver'
+chrome_driver_path = '/Users/kobayashiriku/Downloads/chromedriver-mac-x64/chromedriver'
 chrome_service = Service(chrome_driver_path)
-driver = webdriver.Chrome(service=chrome_service)
+# driver = webdriver.Chrome(service=chrome_service)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 URL_DRIP = "https://product.starbucks.co.jp/beverage/drip/"
 URL_ESPRESSO = "https://product.starbucks.co.jp/beverage/espresso/"
@@ -35,7 +39,7 @@ URL_PACKAGE = "https://product.starbucks.co.jp/food/package/"
 URL_SEASON = "https://product.starbucks.co.jp/new/lineup/?purchase_methods=STARBUCKS_COFFEE"
 
 # 可変箇所１
-log_file_path = "logfile_20240117.log"
+log_file_path = "./logfile/logfile_20240201.log"
 
 # ロガーの用意
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -96,7 +100,7 @@ def scrape_item_list(url):
     return lst
 
 
-# 一つの世界遺産の詳細データの取得
+# 一つの商品の詳細データの取得
 def scrape_item_detail(url, headers, name):
     data = [None for _ in range(len(headers))]
 
@@ -162,7 +166,8 @@ def main():
     parser.add_argument('skip', type=int, default=0, help='整数引数（デフォルト: 0）')
     args = parser.parse_args()
     skip = args.skip
-    csv_file_path = "../data/result_20240117.csv"
+    # 可変箇所２
+    csv_file_path = "../data/result_20240201.csv"
 
     headers = ["大ジャンル", "商品カテゴリ", "商品名", "長方形画像URL", "円形画像URL", "商品URL", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン", "お酒の使用"]
     
@@ -171,8 +176,8 @@ def main():
             csv_writer = csv.writer(csvfile)
             csv_writer.writerow(headers)
 
-    # 可変箇所２
-    lst = scrape_item_list(URL_PACKAGE)
+    # 可変箇所３
+    lst = scrape_item_list(URL_DESSERT)
 
     # print(lst)
 
@@ -181,13 +186,13 @@ def main():
             continue
 
         # 臨時処理
-        if i == 8:
+        if i == 2:
             break
 
         data = scrape_item_detail(item[2], headers, item[0])
-        # 可変箇所３
+        # 可変箇所４
         data[0] = "フード"
-        data[1] = "パッケージフード"
+        data[1] = "デザート"
         data[2] = item[0]
         data[3] = item[1]
         data[5] = item[2]
