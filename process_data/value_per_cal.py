@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # CSVファイル読み込み
-df = pd.read_csv('../data/ex_data.csv')
+df = pd.read_csv('../data/C.csv')
 
 # 分母のコラムと分子のコラムの名前
 denominator_column = 'エネルギー'
@@ -14,4 +14,4 @@ for numerator_column in numerator_columns:
     df[new_column_name] = np.where((pd.isna(df[numerator_column]) | (df[denominator_column] == 0)), None, df[numerator_column] / df[denominator_column])
 
 # 新しいCSVファイルとして保存
-df.to_csv('../data/ex_data.csv', index=False)
+df.to_csv('../data/C_2.csv', index=False)

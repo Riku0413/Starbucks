@@ -9,7 +9,7 @@ def extract_value_unit(input_string):
 
 def main():
     # CSVファイルの読み込み
-    with open('../data/ex_data.csv', 'r') as csv_file:
+    with open('C.csv', 'r') as csv_file:
         reader = csv.reader(csv_file)
         
         # ヘッダーをスキップする
@@ -23,7 +23,7 @@ def main():
             for i, value in enumerate(data):
                 if value == '-' or value == '':
                     new_data.append(None)
-                elif i > 5 and value[0].isdigit():
+                elif i > 5 and i < 21 and value[0].isdigit():
                     try:
                         res = extract_value_unit(value)
                         new_data.append(res[0])
@@ -35,7 +35,7 @@ def main():
             processed_data_list.append(new_data)
 
     # 新しいCSVファイルの書き込み
-    with open('../data/ex_data_3.csv', 'w', newline='') as csv_file:
+    with open('C_2.csv', 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         
         # ヘッダーを書き込む
