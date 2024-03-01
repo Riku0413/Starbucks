@@ -105,6 +105,7 @@ const D3Chart = ({category, sortOrder}) => {
             window.open(d.商品URL, "_blank"); // 新しいタブで外部リンクを開く
         });
     
+    // 棒グラフを描画
     const bar = svg.append("g")
         .attr("fill", "green")
         .selectAll("rect")
@@ -149,15 +150,18 @@ const D3Chart = ({category, sortOrder}) => {
   
             const sortedData = [...data].sort(order);    
             y.domain(sortedData.map(d => d.letter));
-    
+
+            // この値を調整すれば、ソートが終わったジャストタイミングで透明度を1にできそう！
             const t = svg.transition()
                 .duration(1000);
     
             bar.data(sortedData, d => d.letter)
+                .attr("opacity", flag)
                 .transition(t)
                 .delay((d, i) => i * 100)
                 .attr("y", d => y(d.letter)) // 棒グラフのソートの終了位置 y-座標
                 .attr("width", d => x(Math.max(d[`${category}_number`], 0)) - marginLeft)
+                .attr("opacity", 1);
   
             text.data(sortedData, d => d.letter)
                 .attr("opacity", 0)
@@ -308,14 +312,22 @@ const D3Chart = ({category, sortOrder}) => {
           .attr("opacity", 1)
           .transition()
           .duration(500)  // アニメーションの時間（ミリ秒）
-          .attr("opacity", 0.3)  // 透明度を0に変更
+          .attr("opacity", 0.3)  // ここは本当は 0.3 → flag に変えるべき！
+
+      // SVG内のrect要素に対してアニメーションを追加
+      d3.select("#chart-area").select("svg")
+          .selectAll("rect")
+          .attr("opacity", 1)
+          .transition()
+          .duration(500)  // アニメーションの時間（ミリ秒）
+          .attr("opacity", 0.3)  // ここは本当は 0.3 → flag に変えるべき！
 
       d3.select("#chart-area").select("svg")
           .selectAll(".item-name")
           .attr("opacity", 1)
           .transition()
           .duration(500)  // アニメーションの時間（ミリ秒）
-          .attr("opacity", 0.3)
+          .attr("opacity", 0.3)  // ここは本当は 0.3 → flag に変えるべき！
           .end()  // transitionが終了したらresolveするPromiseを返す
           .then(() => {
               chart = context.contextChart

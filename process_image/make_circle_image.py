@@ -6,10 +6,12 @@ from io import BytesIO
 import time
 import uuid
 import pandas as pd
+from datetime import datetime
 
 
 # 可変箇所１
-log_file_path = "./logfile/logfile_make_circle_image_20240201.log"
+today_date = datetime.now().strftime("%Y%m%d")
+log_file_path = f"./process_image/logfile/logfile_make_circle_image_{today_date}.log"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger(__name__)
@@ -47,8 +49,8 @@ def crop_to_circle(img, output_path):
 
 def main():
     # 可変箇所２
-    csv_path = "../data/result_20240201.csv"
-    output_folder = "../image/current"
+    csv_path = "./data/C.csv"
+    output_folder = "./image/current"
 
     # CSVファイルを読み込む
     df = pd.read_csv(csv_path)
@@ -87,7 +89,7 @@ def main():
 
     df['円形画像URL'] = image_filenames
 
-    df.to_csv('../data/result_20240201.csv', index=False)
+    df.to_csv('./data/C.csv', index=False)
 
 
 if __name__ == "__main__":

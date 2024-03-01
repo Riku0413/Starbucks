@@ -1,0 +1,34 @@
+2024-03-01 19:15:44,655 - INFO - Scraping the data of "花見 ブロンド ラテ" of "https://menu.starbucks.co.jp/4524785556836"
+2024-03-01 19:15:55,357 - INFO - Successfully retrieved the data of "花見 ブロンド ラテ" of "https://menu.starbucks.co.jp/4524785556836"
+2024-03-01 19:16:18,753 - INFO - Scraping the data of "花見抹茶 クリーム フラペチーノ®" of "https://menu.starbucks.co.jp/4524785556805"
+2024-03-01 19:16:33,221 - WARNING - Failed to choose Tall size during processing "花見抹茶 クリーム フラペチーノ®" of "https://menu.starbucks.co.jp/4524785556805"
+2024-03-01 19:16:33,282 - INFO - Successfully retrieved the data of "花見抹茶 クリーム フラペチーノ®" of "https://menu.starbucks.co.jp/4524785556805"
+2024-03-01 19:16:44,317 - INFO - Scraping the data of "宇治抹茶チーズケーキ" of "https://menu.starbucks.co.jp/4524785560284"
+2024-03-01 19:16:59,427 - WARNING - Failed to choose Tall size during processing "宇治抹茶チーズケーキ" of "https://menu.starbucks.co.jp/4524785560284"
+2024-03-01 19:16:59,486 - INFO - Successfully retrieved the data of "宇治抹茶チーズケーキ" of "https://menu.starbucks.co.jp/4524785560284"
+2024-03-01 19:17:10,030 - INFO - Scraping the data of "スターバックス オリガミ®&バウムクーヘンアソートセット" of "https://menu.starbucks.co.jp/4524785565647"
+2024-03-01 19:17:10,052 - ERROR - An unexpected error occurred during scraping the data of "スターバックス オリガミ®&バウムクーヘンアソートセット" of "https://menu.starbucks.co.jp/4524785565647": Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="s_nutrition-calculator_accordion"]"}
+  (Session info: chrome=122.0.6261.69); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100e002f8 chromedriver + 4625144
+1   chromedriver                        0x0000000100df7ea3 chromedriver + 4591267
+2   chromedriver                        0x00000001009f6e6a chromedriver + 392810
+3   chromedriver                        0x0000000100a4241d chromedriver + 701469
+4   chromedriver                        0x0000000100a425b1 chromedriver + 701873
+5   chromedriver                        0x0000000100a861c4 chromedriver + 979396
+6   chromedriver                        0x0000000100a6489d chromedriver + 841885
+7   chromedriver                        0x0000000100a8368f chromedriver + 968335
+8   chromedriver                        0x0000000100a64613 chromedriver + 841235
+9   chromedriver                        0x0000000100a353da chromedriver + 648154
+10  chromedriver                        0x0000000100a35d1e chromedriver + 650526
+11  chromedriver                        0x0000000100dc0ac0 chromedriver + 4364992
+12  chromedriver                        0x0000000100dc5e86 chromedriver + 4386438
+13  chromedriver                        0x0000000100da572e chromedriver + 4253486
+14  chromedriver                        0x0000000100dc6bc9 chromedriver + 4389833
+15  chromedriver                        0x0000000100d97a79 chromedriver + 4196985
+16  chromedriver                        0x0000000100de6b78 chromedriver + 4520824
+17  chromedriver                        0x0000000100de6d57 chromedriver + 4521303
+18  chromedriver                        0x0000000100df7ae3 chromedriver + 4590307
+19  libsystem_pthread.dylib             0x00007ff8161db1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8161d6bd3 thread_start + 15
+
