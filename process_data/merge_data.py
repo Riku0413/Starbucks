@@ -1,8 +1,8 @@
 import pandas as pd
 
 # CSVファイル読み込み
-df1 = pd.read_csv('../data/B.csv')
-df2 = pd.read_csv('../data/C.csv')
+df1 = pd.read_csv('./data/B.csv')
+df2 = pd.read_csv('./data/C.csv')
 
 # 一つ目のデータフレームの列を基準に、片方だけに存在する列を追加
 merged_df = df1.copy()
@@ -14,4 +14,4 @@ for column in df2.columns:
 merged_df = pd.concat([merged_df, df2], axis=0, ignore_index=True)
 
 # 結合結果をCSVファイルとして保存
-merged_df.to_csv('../data/B_0.csv', index=False)
+merged_df.to_csv('./data/B_0.csv', index=False)

@@ -1,9 +1,9 @@
 import pandas as pd
 import os
 
-df = pd.read_csv('../data/Back_Number.csv')
+df = pd.read_csv('./data/Back_Number.csv')
 
-default_directory = '../my-app-2/public/'
+default_directory = './my-app-2/public/'
 
 # 各行について画像ファイルを削除する
 for index, row in df.iterrows():

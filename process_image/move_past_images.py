@@ -2,10 +2,10 @@ import pandas as pd
 import os
 import shutil
 
-df = pd.read_csv('../data/back_number.csv')
+df = pd.read_csv('./data/Back_Number.csv')
 
-new_directory = '../image/back_number/'
-defalut_directory = '../image/current/'
+new_directory = './image/back_number/'
+defalut_directory = './image/current/'
 
 # 新しい保存場所のディレクトリが存在しない場合は作成する
 if not os.path.exists(new_directory):

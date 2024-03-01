@@ -1,6 +1,6 @@
 ## プログラム作成順序
 
-### データの更新手順
+### データの更新手順（全てのPythonファイルをルートディレクトリで実行する！）
 
 1. crawler/Scraping_list.py
     - URL一覧を全部のアイテムについて再取得
@@ -9,15 +9,15 @@
     - 追加商品のみスクレイピング
 
 3. 手動
-    - 欠損しているデータを以下のリンクから手作業で補完
-      - [スタバの栄養成分一覧表](https://product.starbucks.co.jp/allergy/nutrient/)
-
-4. 手動
    - C.csvの中に実はGrand_Menuがあれば、"季節のおすすめ""をFalseに変える
 
-5. crawler/remove_unit.py
+4. crawler/remove_unit.py
     - 各データの単位を除去
     - ```'-'```という値を```None```に変換
+
+5. 手動
+    - C.csvに欠損しているデータを以下のリンクから手作業で補完
+      - [スタバの栄養成分一覧表](https://product.starbucks.co.jp/allergy/nutrient/)
 
 6. process_image/make_circle_image.py
     - 商品画像リンクにアクセスして、円形画像に切り抜き
@@ -50,7 +50,7 @@
     - ```商品名```を```letter```に変更
 
 15. 手動
-    - BとCurrent.csvを同一化
+    - BをCurrent.csvに代入して同一化
 
 
 

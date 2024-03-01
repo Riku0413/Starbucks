@@ -11,6 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from urllib.parse import urlparse
+from datetime import datetime
 
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -47,8 +48,10 @@ dic_2 = {
     "package": "パッケージ",
     }
 
+# 今日の日付を取得
 # 可変箇所１
-log_file_path = "./logfile/logfile_20240215_list.log"
+today_date = datetime.now().strftime("%Y%m%d")
+log_file_path = f"./crawler/logfile/logfile_{today_date}_list.log"
 
 # ロガーの用意
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -114,10 +117,10 @@ def scrape_item_list(url):
 
 def main(): 
     # 可変箇所２
-    B_path = "./B.csv"
-    D_path = "./D.csv"
+    B_path = "./data/B.csv"
+    D_path = "./data/D.csv"
     
-    df = pd.read_csv('../data/Current.csv')
+    df = pd.read_csv('./data/Current.csv')
     headers = ["商品名", "長方形画像URL", "商品URL", "limited", "大ジャンル", "商品カテゴリ"]
 
     B_df = pd.DataFrame(columns=df.columns)
