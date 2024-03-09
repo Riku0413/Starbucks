@@ -3,10 +3,11 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useContext } from 'react';
+// @ts-expect-error TS(6142): Module './App' was resolved to '/Users/kobayashiri... Remove this comment to see the full error message
 import { ItemContext } from './App';
 
 
-function a11yProps(index) {
+function a11yProps(index: any) {
   return {
     id: `simple-tab-${index}`,
     'aria-controls': `simple-tabpanel-${index}`,
@@ -27,16 +28,20 @@ export default function BasicTabs() {
     { label: "Sandwich", value: 6, name: "サンドイッチ" },
   ];
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event: any, newValue: any) => {
     setValue(newValue);
     const selectedTab = tabsData.find(tab => tab.value === newValue);
+    // @ts-expect-error TS(2571): Object is of type 'unknown'.
     context.setItemCategory(selectedTab.name);
   };
 
   return (
+    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box sx={{ width: '100%' }}>
+      // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         {/* ScrollButton プロパティを使用してスクロール機能を有効にする */}
+        // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
         <Tabs
           value={value}
           onChange={handleChange}
@@ -53,6 +58,7 @@ export default function BasicTabs() {
           }}
         >
           {tabsData.map((tab, index) => (
+            // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Tab 
               key={index} 
               label={tab.label} 
