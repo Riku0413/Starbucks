@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import { useContext } from 'react';
 import { ItemContext } from './App';
 
-
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -13,19 +12,9 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs({tabsData}) {
   const [value, setValue] = React.useState(0);
   const context = useContext(ItemContext);
-
-  const tabsData = [
-    { label: "Frappuccino", value: 0, name: "フラペチーノ®" },
-    { label: "Coffee", value: 1, name: "コーヒー" },
-    { label: "Espresso", value: 2, name: "エスプレッソ" },
-    { label: "Tea", value: 3, name: "ティー｜TEAVANA™" },
-    { label: "Dessert", value: 4, name: "デザート" },
-    { label: "Pastry", value: 5, name: "ペストリー" },
-    { label: "Sandwich", value: 6, name: "サンドイッチ" },
-  ];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -42,7 +31,7 @@ export default function BasicTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
           variant="scrollable"
-          scrollButtons="auto"
+          scrollButtons="none" // スクロールボタンを非表示にする！！
           sx={{
             '& .MuiTabs-indicator': {
               backgroundColor: 'green', // アンダーバーの色をオレンジに変更

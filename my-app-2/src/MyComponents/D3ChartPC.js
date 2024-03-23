@@ -4,8 +4,9 @@ import Box from "@mui/material/Box";
 import { useEffect, useRef } from "react";
 import { useContext } from "react";
 import { ItemContext } from "./App";
+import { useState } from "react";
 
-const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
+const D3ChartPC = ({ category, sortOrder }) => {
   // console.log("D3Chart");
 
   // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -25,31 +26,46 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
 
   // グラフの描画、アップデート
   const createGraphs = (data, category) => {
-    console.log("createGraphs");
+    console.log("createGraphs of PC");
     console.log(`データ数は：${data.length}`);
     console.log(data);
     console.log(category);
 
-    const width = 640;
+    const width = 840;
     const height = 84 * data.length;
     const marginTop = 20;
     const marginRight = 100;
     const marginBottom = 30;
-    const marginLeft = 120;
+    const marginLeft = 360;
 
     // const screenWidth = window.innerWidth;
 
     // 値に単位をつけて返す関数
     const getLabelText = (d, category) => {
-      const number = d[`${category}_number`];
-      
-      if (number < 0) {
+      if (d[`${category}_number`] < 0) {
         return "no data";
+      } else if (category === "エネルギー") {
+        return d[`${category}_number`] + " kcal";
+      } else if (
+        (category === "タンパク質") |
+        (category === "脂質") |
+        (category === "炭水化物") |
+        (category === "食塩相当量") |
+        (category === "食物繊維") |
+        (category === "糖質") |
+        (category === "トランス脂肪酸") |
+        (category === "飽和脂肪酸")
+      ) {
+        return d[`${category}_number`] + " g";
+      } else if (
+        (category === "ナトリウム") |
+        (category === "カリウム") |
+        (category === "カフェイン")
+      ) {
+        return d[`${category}_number`] + " mg";
+      } else {
+        return d[`${category}_number`];
       }
-    
-      const unit = unitMap[category] || ""; // 対応する単位を取得する
-    
-      return number + " " + unit;
     };
 
     data.forEach((d) => {
@@ -65,10 +81,10 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
     const svg = d3
       .select("#chart-area")
       .append("svg")
-      .attr("viewBox", [0, 0, width, height * 2]) // 変更してみた！！！
+      .attr("viewBox", [0, 0, width, height * 0.85]) // 変更してみた！！！
       .attr(
         "style",
-        `max-width: ${width}px;  font: 10px sans-serif; overflow: visible;`
+        `max-width: ${width}px; font: 10px sans-serif; overflow: visible;`
       );
 
     // x軸（水平位置）のスケールを宣言
@@ -82,7 +98,7 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
     const y = d3
       .scaleBand()
       .domain(data.map((d) => d.letter))
-      .range([marginTop + 10, height * 2 - marginBottom])
+      .range([marginTop + 10, height * 0.85 - marginBottom])
       .padding(0.6);
 
     // テキストを描画
@@ -93,12 +109,12 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
       .enter()
       .append("text")
       .attr("class", "item-name")
-      .attr("y", (d) => y(d.letter) - 15)
+      .attr("y", (d) => y(d.letter) + 25)
       // .attr('y', d => (screenWidth < 600 ? y(d.letter) - 15 : y(d.letter) + 15))
-      .attr("x", 120)
+      .attr("x", 60)
       .attr("font-weight", "bold")
       .attr("fill", "black")
-      .attr("font-size", "30px")
+      .attr("font-size", "15px")
       .text((d) =>
         d.letter.length > 18 ? d.letter.slice(0, 18) + "..." : d.letter
       );
@@ -111,8 +127,8 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
       .append("image")
       .attr("x", 0)
       .attr("y", (d) => y(d.letter) - 5)
-      .attr("width", 90) // 画像の幅
-      .attr("height", 90) // 画像の高さ
+      .attr("width", 45) // 画像の幅
+      .attr("height", 45) // 画像の高さ
       .attr("cursor", "pointer")
       .attr("xlink:href", (d) => d.円形画像URL)
       .on("click", function (e, d) {
@@ -127,12 +143,12 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
       .data(data)
       .join("rect")
       .style("mix-blend-mode", "multiply") // 重なっている時のカラーを暗くする
-      .attr("y", (d) => y(d.letter)) // 棒の成長アニメーションの開始 y-座標
-      .attr("x", marginLeft)
-      // .attr("width", (d) =>
-      //   Math.max(x(d[`${category}_number`]) - marginLeft, 0)
-      // )
-      // .attr("height", y.bandwidth());
+      .attr("y", (d) => y(d.letter) - 5) // 棒の成長アニメーションの開始 y-座標
+      .attr("x", marginLeft);
+    // .attr("width", (d) =>
+    //   Math.max(x(d[`${category}_number`]) - marginLeft, 0)
+    // )
+    // .attr("height", y.bandwidth());
 
     // ここに分割して成長アニメーションを置くことで、ソートアニメーションを行使できる！
     bar
@@ -154,10 +170,10 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
       .attr("class", "value") // 動的に生成したIDを割り当て
       .attr("id", (d, i) => `text-${i}`) // 動的に生成したIDを割り当て
       .attr("x", (d) => 10 + x(Math.max(d[`${category}_number`], 0))) // テキストのX座標（バーの右横に調整）
-      .attr("y", (d) => y(d.letter) + 40) // テキストのY座標
+      .attr("y", (d) => y(d.letter)) // テキストのY座標
       .text((d) => getLabelText(d, category))
       .attr("fill", "black")
-      .attr("font-size", "30px")
+      .attr("font-size", "15px")
       .attr("font-family", "Arial"); // フォントを指定
 
     text
@@ -180,7 +196,7 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
           .attr("opacity", flag)
           .transition(t)
           .delay((d, i) => i * 100)
-          .attr("y", (d) => y(d.letter)) // 棒グラフのソートの終了位置 y-座標
+          .attr("y", (d) => y(d.letter) - 5) // 棒グラフのソートの終了位置 y-座標
           .attr(
             "width",
             (d) => x(Math.max(d[`${category}_number`], 0)) - marginLeft
@@ -192,7 +208,7 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
           .attr("opacity", 0)
           .transition(t)
           .delay((d, i) => i * 100)
-          .attr("y", (d) => y(d.letter) + 40) // 棒グラフのソートの終了位置 y-座標
+          .attr("y", (d) => y(d.letter) + 12) // 棒グラフのソートの終了位置 y-座標
           .attr(
             "width",
             (d) => x(Math.max(d[`${category}_number`], 0)) - marginLeft
@@ -205,13 +221,13 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
           .attr("opacity", flag)
           .transition(t)
           .delay((d, i) => i * 100)
-          .attr("y", (d) => y(d.letter) - 15) // 棒グラフのソートの終了位置 y-座標
+          .attr("y", (d) => y(d.letter) + 13) // 棒グラフのソートの終了位置 y-座標
           // .attr('y', d => (screenWidth < 600 ? y(d.letter) - 15 : y(d.letter) + 15))
           .attr(
             "width",
             (d) => x(Math.max(d[`${category}_number`], 0)) - marginLeft
           )
-          .attr("x", 120)
+          .attr("x", 60)
           .attr("opacity", 1); // アニメーション中に不透明に変更
 
         images
@@ -384,7 +400,7 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
     console.log("first");
     const fetchData = async () => {
       try {
-        const response = await fetch(csvPath);
+        const response = await fetch("ex_data.csv");
         const csvtData = await response.text();
         const rows = await csvtData.split("\n");
         const headers = await rows[0].split(",");
@@ -494,4 +510,4 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
   return <Box sx={{ flexGrow: 1 }}></Box>;
 };
 
-export default D3Chart;
+export default D3ChartPC;
