@@ -133,7 +133,11 @@ def main():
 
     headers = ["大ジャンル", "商品カテゴリ", "商品名", "長方形画像URL", "円形画像URL", "商品URL", "エネルギー", "タンパク質", "脂質", "炭水化物", "食塩相当量", "食物繊維", "糖質", "ナトリウム", "カリウム", "トランス脂肪酸", "飽和脂肪酸", "カフェイン", "お酒の使用", "limited", "季節のおすすめ", "timestamp"]
 
-    if not os.path.isfile(C_path):
+    if os.path.isfile(C_path):
+        with open(C_path, mode='w+', newline='') as csvfile: # 'w+' モードを使用
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(headers)
+    else:
         with open(C_path, mode='w', newline='') as csvfile:
             csv_writer = csv.writer(csvfile)
             csv_writer.writerow(headers)
