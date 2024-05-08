@@ -1,0 +1,6 @@
+2024-05-09 00:36:56,488 - INFO - Scraping the data of "スターバックス ストロベリー フラペチーノ®" of "https://menu.starbucks.co.jp/4524785461062"
+2024-05-09 00:37:08,969 - WARNING - Failed to choose Tall size during processing "スターバックス ストロベリー フラペチーノ®" of "https://menu.starbucks.co.jp/4524785461062"
+2024-05-09 00:37:09,034 - INFO - Successfully retrieved the data of "スターバックス ストロベリー フラペチーノ®" of "https://menu.starbucks.co.jp/4524785461062"
+2024-05-09 00:37:10,763 - INFO - Scraping the data of "ストロベリー＆バニラカスタードタルト" of "https://menu.starbucks.co.jp/4524785562660"
+2024-05-09 00:37:23,140 - WARNING - Failed to choose Tall size during processing "ストロベリー＆バニラカスタードタルト" of "https://menu.starbucks.co.jp/4524785562660"
+2024-05-09 00:37:23,197 - INFO - Successfully retrieved the data of "ストロベリー＆バニラカスタードタルト" of "https://menu.starbucks.co.jp/4524785562660"
