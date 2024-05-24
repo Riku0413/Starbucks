@@ -393,6 +393,7 @@ const D3Chart = ({ category, sortOrder, unitMap, csvPath }) => {
           return headers.reduce((obj, header, index) => {
             const trimmedHeader = header.trim();
             const trimmedValue = values[index] ? values[index].trim() : ""; // Check if value is undefined before trimming
+            console.log(obj);
             obj[trimmedHeader] = trimmedValue;
             return obj;
           }, {});

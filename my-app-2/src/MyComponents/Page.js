@@ -16,7 +16,7 @@ import { useContext } from "react";
 import { ItemContext } from "./App";
 
 const Page = ({ drawerWidth, menuItems, nameMap, unitMap, csvPath }) => {
-  const isMobile = window.innerWidth <= 800; // 768は一般的なモバイル画面の幅ですが、必要に応じて調整してください
+  const isMobile = window.innerWidth <= 599; // 768は一般的なモバイル画面の幅ですが、必要に応じて調整してください
 
   const [category, setCategory] = useState(menuItems[0]);
   const [sortOrder, setSortOrder] = useState("alpha");
@@ -62,7 +62,7 @@ const Page = ({ drawerWidth, menuItems, nameMap, unitMap, csvPath }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            width: "80%",
+            width: "90%",
           }}
         >
           <Box
@@ -94,7 +94,7 @@ const Page = ({ drawerWidth, menuItems, nameMap, unitMap, csvPath }) => {
           </Box>
           <Box sx={{ height: "20px" }} />
 
-          <Box sx={{ width: "100%", marginRight: "0", display: "flex" }}>
+          <Box sx={{ width: "100%", display: "flex", marginRight: "auto", marginLeft: "auto", maxWidth: "600px" }}>
             <FormControl
               fullWidth
               sx={{
@@ -160,12 +160,12 @@ const Page = ({ drawerWidth, menuItems, nameMap, unitMap, csvPath }) => {
         style={{
           display: "flex",
           justifyContent: "center",
-          width: "80%",
+          width: "90%",
           margin: "0 auto",
         }}
       >
         {/* <Box sx={{width: '80vw'}}> */}
-        <Card sx={{ width: "100%" }}>
+        <Card sx={{ width: "100%", maxWidth: "800px" }}>
           <Box style={{ height: "20px" }} />
           <CardContent>
             <Box sx={{ textAlign: "left" }}>
