@@ -5,7 +5,6 @@ import { Select } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import { FormControl } from '@mui/material';
 import { InputLabel } from '@mui/material';
-// @ts-expect-error TS(6142): Module './D3Chart' was resolved to '/Users/kobayas... Remove this comment to see the full error message
 import D3Chart from './D3Chart';
 import { Card } from '@mui/material';
 import { Typography } from '@mui/material';
@@ -13,7 +12,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import { useContext } from 'react';
-// @ts-expect-error TS(6142): Module './App' was resolved to '/Users/kobayashiri... Remove this comment to see the full error message
 import { ItemContext } from './App';
 
 const Page = () => {
@@ -52,7 +50,6 @@ const Page = () => {
   }
 
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box sx={{bgcolor: '#E6FFE9' }}>
       // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Box sx={{height: '108px'}}></Box>

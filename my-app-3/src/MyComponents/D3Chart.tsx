@@ -1,10 +1,8 @@
 import * as React from 'react';
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'd3'.... Remove this comment to see the full error message
 import * as d3 from "d3";
 import Box from '@mui/material/Box';
 import { useEffect, useRef } from 'react';
 import { useContext } from 'react';
-// @ts-expect-error TS(6142): Module './App' was resolved to '/Users/kobayashiri... Remove this comment to see the full error message
 import { ItemContext } from './App';
 
 
@@ -450,7 +448,6 @@ const D3Chart = ({
   }, [context.contextData]);
 
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box sx={{ flexGrow: 1 }}></Box>
   );
 }

@@ -3,7 +3,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useContext } from 'react';
-// @ts-expect-error TS(6142): Module './App' was resolved to '/Users/kobayashiri... Remove this comment to see the full error message
 import { ItemContext } from './App';
 
 
@@ -36,7 +35,6 @@ export default function BasicTabs() {
   };
 
   return (
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <Box sx={{ width: '100%' }}>
       // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -58,7 +56,6 @@ export default function BasicTabs() {
           }}
         >
           {tabsData.map((tab, index) => (
-            // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
             <Tab 
               key={index} 
               label={tab.label} 

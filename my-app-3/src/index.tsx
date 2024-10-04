@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// @ts-expect-error TS(6142): Module './MyComponents/App' was resolved to '/User... Remove this comment to see the full error message
 import App from './MyComponents/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,7 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // 2回レンダリングする設定をコメントアウト
   // <React.StrictMode>
-    // @ts-expect-error TS(17004): Cannot use JSX unless the '--jsx' flag is provided... Remove this comment to see the full error message
     <App />
   // </React.StrictMode>
 );
